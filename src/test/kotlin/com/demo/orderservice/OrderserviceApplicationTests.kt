@@ -30,18 +30,6 @@ fun `test getOrderQuantityMap passes`() {
     Assertions.assertEquals(expectedResult, orderQuantityMap)
 }
 
-// @Test
-// fun `test getOrderQuantityMap fails`() {
-//     val fruits = listOf<String>("Strawberry", "Apple", "Orange", "Orange", "Apple")
-//     for (fruit in fruits) {
-//         tallyOrder(fruit)
-//     }
-//     val orderQuantityMap =
-//             mapOf<String, Int>("Orange" to numberOfOranges, "Apple" to numberOfApples)
-//     val expectedResult = mapOf<String, Int>("Orange" to 3, "Apple" to 2)
-//     Assertions.assertEquals(expectedResult, orderQuantityMap)
-// }
-
 @Test
 fun `test checkOrangeOffer passes`() {
     val fruits = listOf<String>("Orange", "Orange", "Orange")
@@ -63,14 +51,6 @@ fun `test multipleFruits passes`() {
     Assertions.assertEquals(1.95, testFruit.getTotal())
 }
 
-// @Test
-// fun `test multipleFruits fails`() {
-//     val fruits =
-//             listOf<String>("Apple", "Apple", "Apple", "Orange", "Orange", "Orange", "Orange")
-//     val testFruit = Fruit(fruits)
-//     Assertions.assertEquals(2.8, testFruit.getTotal())
-// }
-
 @Test
 fun `test checkInventory passes`() {
     val fruits = listOf<String>("Apple", "Apple", "Apple", "Orange", "Orange", "Orange", "Orange")
@@ -82,54 +62,6 @@ fun `test checkInventory passes`() {
                     "Orange" to Stockpile.getOrangeStockpile())
     Assertions.assertEquals(expectedInventory, actualInventory)
 }
-
-
-
-    // @Test
-
-
-
-    // fun `test checkInventory fails`() {
-
-
-
-    //     val fruits =
-
-
-
-    //             listOf<String>("Apple", "Apple", "Apple", "Orange", "Orange", "Orange", "Orange")
-
-
-
-    //     for (fruit in fruits) {
-
-
-
-    //         checkStockpile(fruit)
-
-
-
-    //     }
-
-
-
-    //     val expectedApples = mapOf<String, Int>("Apple" to 2, "Orange" to 2)
-
-
-
-    //     val actualApples =
-
-
-
-    //             mapOf<String, Int>("Apple" to appleStockpile, "Orange" to orangeStockPile)
-
-
-
-    //     Assertions.assertEquals(expectedApples, actualApples)
-
-
-
-    // }
 
 
 }
