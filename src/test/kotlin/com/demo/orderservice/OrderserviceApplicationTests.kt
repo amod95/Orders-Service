@@ -20,7 +20,7 @@ fun getValue() {
 
 @Test
 fun `test getOrderQuantityMap passes`() {
-    val fruits = listOf("Orange", "Apple", "Orange", "Orange", "Apple")
+    val fruits = listOf("Orange", "Orange", "Orange", "Apple", "Apple")
     val testFruit = Fruit(fruits)
     val orderQuantityMap =
             mapOf<String, Int>(
@@ -54,7 +54,12 @@ fun `test multipleFruits passes`() {
 @Test
 fun `test checkInventory passes`() {
     val fruits = listOf<String>("Apple", "Apple", "Apple", "Orange", "Orange", "Orange", "Orange")
-    Stockpile.isInStock(fruits)
+	Stockpile.setOrangeStockpile(10)
+	Stockpile.setAppleStockpile(10)
+    for(fruit in fruits)
+	{
+		Stockpile.isInStock(fruit)
+	}
     val expectedInventory = mapOf<String, Int>("Apple" to 7, "Orange" to 6)
     val actualInventory =
             mapOf<String, Int>(

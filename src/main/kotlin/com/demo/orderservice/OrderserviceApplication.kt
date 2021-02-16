@@ -7,14 +7,10 @@ fun main(args: Array<String>) {
     println("Please input your order")
     val fruitInputString = readLine() ?: exitProcess(0)
     val fruitArray = fruitInputString.split(",")
-	
-	val fruitOrder = Fruit(fruitArray)
 
-    val stockpile = Stockpile.isInStock(fruitArray)
-
-    if (stockpile) {
+    val fruitOrder = Fruit(fruitArray)
+    //If in stock, output order total
+        // Create fruit object
         val orderTotal = fruitOrder.getTotal()
-        println("Your order is in stock.")
-        println("Your order total is $" + orderTotal)
-    } else println("Your order is not in stock.")
+        println("Your order total is $" + orderTotal)   
 }
