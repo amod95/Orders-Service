@@ -12,12 +12,12 @@ class Fruit {
         fruitOrder.set("Orange", 0)
         //Checks to see if each fruit is available in stockpile. If so, add it to the fruit Map. Else, let user know fruit isn't in stock
         for (fruit in Order) {
-        if(Stockpile.isInStock(fruit))
+        if(Stockpile.isInStock(fruit.toLowerCase().capitalize()))
         {
-            addFruitToMap(fruit)
+            addFruitToMap(fruit.toLowerCase().capitalize())
         }
         else
-            println(fruit+"'s are not in stock.")
+            println(fruit.toLowerCase().capitalize()+"'s are not in stock.")
     }
     }
 
